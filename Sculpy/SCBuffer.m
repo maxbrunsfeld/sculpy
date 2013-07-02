@@ -131,6 +131,33 @@
     }
 }
 
+- (void)deleteCharacterForwards
+{
+    NSUInteger retreat = 0;
+    for (SCInsertionPoint *insertionPoint in self.insertionPoints) {
+        [insertionPoint advanceBy:(-1 * retreat)];
+        NSInteger index = insertionPoint.index;
+        if (index < self.length) {
+            [self.textStorage replaceCharactersInRange:NSMakeRange(index, 1) withString:@""];
+            retreat++;
+        }
+    }
+}
+
+- (void)deleteCharacterBackwards
+{
+    NSUInteger retreat = 0;
+    for (SCInsertionPoint *insertionPoint in self.insertionPoints) {
+        [insertionPoint advanceBy:(-1 * retreat)];
+        NSInteger index = insertionPoint.index - 1;
+        if (index >= 0) {
+            [self.textStorage replaceCharactersInRange:NSMakeRange(index, 1) withString:@""];
+            [insertionPoint advanceBy:(-1)];
+            retreat++;
+        }
+    }
+}
+
 # pragma mark - Querying
 
 - (NSString *)string

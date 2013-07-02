@@ -5,8 +5,8 @@
 # pragma mark - SCKeyCombination
 
 @interface SCKeyCombination : NSObject
-+ (instancetype) combinationWithCode:(NSNumber *)code modifiers:(NSNumber *)modifiers;
-+ (instancetype) clickWithModifiers:(NSNumber *)modifiers;
++ (instancetype)combinationWithCode:(NSNumber *)code modifiers:(NSNumber *)modifiers;
++ (instancetype)clickWithModifiers:(NSNumber *)modifiers;
 @property (nonatomic, strong) NSNumber *modifierFlags;
 @property (nonatomic, strong) NSNumber *keyCode;
 @property (nonatomic, assign) int type;
@@ -56,7 +56,7 @@ NSDictionary *keyCodeMap()
 {
     static NSDictionary *result = nil;
     if (!result) {
-        result = @{@"`": @50, @"-": @27, @"+": @24,
+        result = @{@"`": @50, @"-": @27, @"+": @24, @"delete": @51,
                    @"1": @18, @"2": @19, @"3": @20, @"4": @21, @"5": @23, @"6": @22, @"7": @26, @"8": @28, @"9": @25, @"0": @29,
                    @"q": @12, @"w": @13, @"e": @14, @"r": @15, @"t": @17, @"y": @16, @"u": @32, @"i": @34, @"o": @31, @"p": @35,
                    @"a": @0,  @"s": @1,  @"d": @2,  @"f": @3,  @"g": @5,  @"h": @4,  @"j": @38, @"k": @40, @"l": @37, @";": @41, 
@@ -123,6 +123,7 @@ NSDictionary *specialChars() {
      @"right": @"moveRight",
      @"cmd+left": @"moveToBeginningOfLine",
      @"cmd+right": @"moveToEndOfLine",
+     @"delete": @"deleteCharacterBackwards",
      
      @"ctrl+p": @"moveUp",
      @"ctrl+n": @"moveDown",
@@ -130,6 +131,9 @@ NSDictionary *specialChars() {
      @"ctrl+f": @"moveRight",
      @"ctrl+a": @"moveToBeginningOfLine",
      @"ctrl+e": @"moveToEndOfLine",
+     @"ctrl+d": @"deleteCharacterForwards",
+     @"ctrl+h": @"deleteCharacterBackwards",
+
      @"click": @"setInsertionPointIndex:",
      @"alt+click": @"addInsertionPointAtIndex:"}];
 

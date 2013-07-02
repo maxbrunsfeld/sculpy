@@ -28,10 +28,41 @@ describe(@"SCBuffer", ^{
             [buffer addInsertionPointAtIndex:@(@"one two".length)];
             [buffer addInsertionPointAtIndex:@(@"one two three".length)];
         });
-        
+
         it(@"can insert a string at every insertion point", ^{
-            [buffer insertCharacter:@"..."];
-            buffer.string should equal(@"one... two... three...\nfour five six");
+            [buffer insertCharacter:@"!"];
+            buffer.string should equal(@"one! two! three!\nfour five six");
+        });
+
+        describe(@"deleting", ^{
+            it(@"can delete backward a character", ^{
+                [buffer deleteCharacterBackwards];
+                buffer.string should equal(@"on tw thre\nfour five six");
+                buffer.insertionPointIndices should equal(@[@(@"on".length),
+                                                          @(@"on tw".length),
+                                                          @(@"on tw thre".length)]);
+            });
+            
+            it(@"can delete forward a character", ^{
+                [buffer deleteCharacterForwards];
+                buffer.string should equal(@"onetwothreefour five six");
+                buffer.insertionPointIndices should equal(@[@(@"one".length),
+                                                          @(@"onetwo".length),
+                                                          @(@"onetwothree".length)]);
+            });
+            
+            it(@"can't delete past the beginning of the text", ^{
+                [buffer setInsertionPointIndex:0];
+                [buffer deleteCharacterBackwards];
+                buffer.insertionPointIndices should equal(@[@0]);
+            });
+            
+            it(@"can't delete past the end of the text", ^{
+                [buffer setInsertionPointIndex:@(string.length)];
+                [buffer deleteCharacterForwards];
+                buffer.string should equal(string);
+                buffer.insertionPointIndices should equal(@[@(string.length)]);
+            });
         });
         
         it(@"can move all of its insertion points left and right", ^{

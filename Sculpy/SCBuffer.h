@@ -22,6 +22,8 @@
 - (void)addInsertionPointAtIndex:(NSNumber *)index;
 
 - (void)insertCharacter:(NSString *)string;
+- (void)deleteCharacterForwards;
+- (void)deleteCharacterBackwards;
 
 - (NSString *)string;
 - (NSUInteger)length;
