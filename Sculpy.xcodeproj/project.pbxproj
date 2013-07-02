@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12503EE71766F859007F3B8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12503ED31766F7D5007F3B8C /* Foundation.framework */; };
+		12503EED1766F859007F3B8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12503EEC1766F859007F3B8C /* main.m */; };
+		12503EF51766F922007F3B8C /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12503EF41766F922007F3B8C /* Cedar.framework */; };
+		12503EF61766F997007F3B8C /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12503EF41766F922007F3B8C /* Cedar.framework */; };
+		12503EFB176969DB007F3B8C /* SCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12503EFA176969DB007F3B8C /* SCTextView.m */; };
+		12503EFC176969DB007F3B8C /* SCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12503EFA176969DB007F3B8C /* SCTextView.m */; };
+		12503F01176AE36C007F3B8C /* SCInsertionPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 12503F00176AE36C007F3B8C /* SCInsertionPoint.m */; };
+		12503F02176AE36C007F3B8C /* SCInsertionPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 12503F00176AE36C007F3B8C /* SCInsertionPoint.m */; };
+		12503F06176AE69B007F3B8C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129FD6171766F1BD00E0B3D5 /* Cocoa.framework */; };
+		1250B39A17701305009FF71D /* SCTextViewSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1250B39917701305009FF71D /* SCTextViewSpec.mm */; };
+		1250B3A117701A93009FF71D /* SCSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1250B3A017701A93009FF71D /* SCSpecHelper.m */; };
+		1250B3AD17717497009FF71D /* SCKeyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1250B3AC17717497009FF71D /* SCKeyMap.m */; };
+		1250B3AE17717497009FF71D /* SCKeyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1250B3AC17717497009FF71D /* SCKeyMap.m */; };
+		126B823517735059007A2F4A /* SCKeyMapSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 126B823417735059007A2F4A /* SCKeyMapSpec.mm */; };
+		126B82361776BDDA007A2F4A /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FD62A1766F1BD00E0B3D5 /* SCAppDelegate.m */; };
+		129FD6181766F1BD00E0B3D5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129FD6171766F1BD00E0B3D5 /* Cocoa.framework */; };
+		129FD6221766F1BD00E0B3D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 129FD6201766F1BD00E0B3D5 /* InfoPlist.strings */; };
+		129FD6241766F1BD00E0B3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FD6231766F1BD00E0B3D5 /* main.m */; };
+		129FD6281766F1BD00E0B3D5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 129FD6261766F1BD00E0B3D5 /* Credits.rtf */; };
+		129FD62B1766F1BD00E0B3D5 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FD62A1766F1BD00E0B3D5 /* SCAppDelegate.m */; };
+		129FD62E1766F1BD00E0B3D5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129FD62C1766F1BD00E0B3D5 /* MainMenu.xib */; };
+		12D80B1D17778C8D00678CB2 /* SCCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D80B1C17778C8D00678CB2 /* SCCommand.m */; };
+		12D80B1E17778C8D00678CB2 /* SCCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D80B1C17778C8D00678CB2 /* SCCommand.m */; };
+		12D80B2117792B2800678CB2 /* SCBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D80B2017792B2800678CB2 /* SCBuffer.m */; };
+		12D80B2217792B2800678CB2 /* SCBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D80B2017792B2800678CB2 /* SCBuffer.m */; };
+		12D80B2417795EEE00678CB2 /* SCBufferSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12D80B2317795EEE00678CB2 /* SCBufferSpec.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12503ED31766F7D5007F3B8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		12503EE61766F859007F3B8C /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
+		12503EE91766F859007F3B8C /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		12503EEB1766F859007F3B8C /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		12503EEC1766F859007F3B8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		12503EF41766F922007F3B8C /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Cedar/build/Release/Cedar.framework; sourceTree = "<group>"; };
+		12503EF9176969DB007F3B8C /* SCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTextView.h; sourceTree = "<group>"; };
+		12503EFA176969DB007F3B8C /* SCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTextView.m; sourceTree = "<group>"; };
+		12503EFF176AE36C007F3B8C /* SCInsertionPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCInsertionPoint.h; sourceTree = "<group>"; };
+		12503F00176AE36C007F3B8C /* SCInsertionPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCInsertionPoint.m; sourceTree = "<group>"; };
+		1250B39917701305009FF71D /* SCTextViewSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SCTextViewSpec.mm; sourceTree = "<group>"; };
+		1250B39F17701A93009FF71D /* SCSpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSpecHelper.h; sourceTree = "<group>"; };
+		1250B3A017701A93009FF71D /* SCSpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSpecHelper.m; sourceTree = "<group>"; };
+		1250B3AB17717497009FF71D /* SCKeyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKeyMap.h; sourceTree = "<group>"; };
+		1250B3AC17717497009FF71D /* SCKeyMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKeyMap.m; sourceTree = "<group>"; };
+		126B823417735059007A2F4A /* SCKeyMapSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SCKeyMapSpec.mm; sourceTree = "<group>"; };
+		129FD6141766F1BD00E0B3D5 /* Sculpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sculpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		129FD6171766F1BD00E0B3D5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		129FD61A1766F1BD00E0B3D5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		129FD61B1766F1BD00E0B3D5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		129FD61C1766F1BD00E0B3D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		129FD61F1766F1BD00E0B3D5 /* Sculpy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sculpy-Info.plist"; sourceTree = "<group>"; };
+		129FD6211766F1BD00E0B3D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		129FD6231766F1BD00E0B3D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		129FD6251766F1BD00E0B3D5 /* Sculpy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sculpy-Prefix.pch"; sourceTree = "<group>"; };
+		129FD6271766F1BD00E0B3D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		129FD6291766F1BD00E0B3D5 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		129FD62A1766F1BD00E0B3D5 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		129FD62D1766F1BD00E0B3D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		12D80B1B17778C8D00678CB2 /* SCCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCommand.h; sourceTree = "<group>"; };
+		12D80B1C17778C8D00678CB2 /* SCCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCommand.m; sourceTree = "<group>"; };
+		12D80B1F17792B2800678CB2 /* SCBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBuffer.h; sourceTree = "<group>"; };
+		12D80B2017792B2800678CB2 /* SCBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBuffer.m; sourceTree = "<group>"; };
+		12D80B2317795EEE00678CB2 /* SCBufferSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SCBufferSpec.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12503EE41766F859007F3B8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12503F06176AE69B007F3B8C /* Cocoa.framework in Frameworks */,
+				12503EF61766F997007F3B8C /* Cedar.framework in Frameworks */,
+				12503EE71766F859007F3B8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		129FD6111766F1BD00E0B3D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				129FD6181766F1BD00E0B3D5 /* Cocoa.framework in Frameworks */,
+				12503EF51766F922007F3B8C /* Cedar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12503EE81766F859007F3B8C /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				126B82331773503F007A2F4A /* Models */,
+				1250B39B17701852009FF71D /* Extensions */,
+				1250B3981770129E009FF71D /* Views */,
+				12503EE91766F859007F3B8C /* Rakefile */,
+				12503EEC1766F859007F3B8C /* main.m */,
+				12503EEA1766F859007F3B8C /* Supporting Files */,
+				1250B39F17701A93009FF71D /* SCSpecHelper.h */,
+				1250B3A017701A93009FF71D /* SCSpecHelper.m */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		12503EEA1766F859007F3B8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12503EEB1766F859007F3B8C /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12503EF717696986007F3B8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				129FD6291766F1BD00E0B3D5 /* SCAppDelegate.h */,
+				129FD62A1766F1BD00E0B3D5 /* SCAppDelegate.m */,
+				129FD62C1766F1BD00E0B3D5 /* MainMenu.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		12503EF8176969BF007F3B8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12503EF9176969DB007F3B8C /* SCTextView.h */,
+				12503EFA176969DB007F3B8C /* SCTextView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1250B3981770129E009FF71D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1250B39917701305009FF71D /* SCTextViewSpec.mm */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1250B39B17701852009FF71D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		126B82331773503F007A2F4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				126B823417735059007A2F4A /* SCKeyMapSpec.mm */,
+				12D80B2317795EEE00678CB2 /* SCBufferSpec.mm */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		129FD60B1766F1BD00E0B3D5 = {
+			isa = PBXGroup;
+			children = (
+				129FD61D1766F1BD00E0B3D5 /* Sculpy */,
+				12503EE81766F859007F3B8C /* Specs */,
+				129FD6161766F1BD00E0B3D5 /* Frameworks */,
+				129FD6151766F1BD00E0B3D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		129FD6151766F1BD00E0B3D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				129FD6141766F1BD00E0B3D5 /* Sculpy.app */,
+				12503EE61766F859007F3B8C /* Specs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		129FD6161766F1BD00E0B3D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12503EF41766F922007F3B8C /* Cedar.framework */,
+				129FD6171766F1BD00E0B3D5 /* Cocoa.framework */,
+				12503ED31766F7D5007F3B8C /* Foundation.framework */,
+				129FD6191766F1BD00E0B3D5 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		129FD6191766F1BD00E0B3D5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				129FD61A1766F1BD00E0B3D5 /* AppKit.framework */,
+				129FD61B1766F1BD00E0B3D5 /* CoreData.framework */,
+				129FD61C1766F1BD00E0B3D5 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		129FD61D1766F1BD00E0B3D5 /* Sculpy */ = {
+			isa = PBXGroup;
+			children = (
+				12D80B1A17778C7000678CB2 /* Models */,
+				12503EF8176969BF007F3B8C /* Views */,
+				12503EF717696986007F3B8C /* Controllers */,
+				129FD61E1766F1BD00E0B3D5 /* Supporting Files */,
+			);
+			path = Sculpy;
+			sourceTree = "<group>";
+		};
+		129FD61E1766F1BD00E0B3D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				129FD61F1766F1BD00E0B3D5 /* Sculpy-Info.plist */,
+				129FD6201766F1BD00E0B3D5 /* InfoPlist.strings */,
+				129FD6231766F1BD00E0B3D5 /* main.m */,
+				129FD6251766F1BD00E0B3D5 /* Sculpy-Prefix.pch */,
+				129FD6261766F1BD00E0B3D5 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12D80B1A17778C7000678CB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1250B3AB17717497009FF71D /* SCKeyMap.h */,
+				1250B3AC17717497009FF71D /* SCKeyMap.m */,
+				12503F00176AE36C007F3B8C /* SCInsertionPoint.m */,
+				12503EFF176AE36C007F3B8C /* SCInsertionPoint.h */,
+				12D80B1B17778C8D00678CB2 /* SCCommand.h */,
+				12D80B1C17778C8D00678CB2 /* SCCommand.m */,
+				12D80B1F17792B2800678CB2 /* SCBuffer.h */,
+				12D80B2017792B2800678CB2 /* SCBuffer.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12503EE51766F859007F3B8C /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12503EF01766F859007F3B8C /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				12503EE21766F859007F3B8C /* ShellScript */,
+				12503EE31766F859007F3B8C /* Sources */,
+				12503EE41766F859007F3B8C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 12503EE61766F859007F3B8C /* Specs */;
+			productType = "com.apple.product-type.tool";
+		};
+		129FD6131766F1BD00E0B3D5 /* Sculpy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 129FD6451766F1BD00E0B3D5 /* Build configuration list for PBXNativeTarget "Sculpy" */;
+			buildPhases = (
+				129FD6101766F1BD00E0B3D5 /* Sources */,
+				129FD6111766F1BD00E0B3D5 /* Frameworks */,
+				129FD6121766F1BD00E0B3D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sculpy;
+			productName = Sculpy;
+			productReference = 129FD6141766F1BD00E0B3D5 /* Sculpy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		129FD60C1766F1BD00E0B3D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Max Brunsfeld";
+			};
+			buildConfigurationList = 129FD60F1766F1BD00E0B3D5 /* Build configuration list for PBXProject "Sculpy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 129FD60B1766F1BD00E0B3D5;
+			productRefGroup = 129FD6151766F1BD00E0B3D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				129FD6131766F1BD00E0B3D5 /* Sculpy */,
+				12503EE51766F859007F3B8C /* Specs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		129FD6121766F1BD00E0B3D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				129FD6221766F1BD00E0B3D5 /* InfoPlist.strings in Resources */,
+				129FD6281766F1BD00E0B3D5 /* Credits.rtf in Resources */,
+				129FD62E1766F1BD00E0B3D5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12503EE21766F859007F3B8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R \"${TARGET_NAME}\"/Frameworks/Cedar.framework \"${BUILT_PRODUCTS_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12503EE31766F859007F3B8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12503EED1766F859007F3B8C /* main.m in Sources */,
+				12503EFC176969DB007F3B8C /* SCTextView.m in Sources */,
+				12503F02176AE36C007F3B8C /* SCInsertionPoint.m in Sources */,
+				1250B39A17701305009FF71D /* SCTextViewSpec.mm in Sources */,
+				1250B3A117701A93009FF71D /* SCSpecHelper.m in Sources */,
+				1250B3AE17717497009FF71D /* SCKeyMap.m in Sources */,
+				126B823517735059007A2F4A /* SCKeyMapSpec.mm in Sources */,
+				126B82361776BDDA007A2F4A /* SCAppDelegate.m in Sources */,
+				12D80B1E17778C8D00678CB2 /* SCCommand.m in Sources */,
+				12D80B2217792B2800678CB2 /* SCBuffer.m in Sources */,
+				12D80B2417795EEE00678CB2 /* SCBufferSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		129FD6101766F1BD00E0B3D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				129FD6241766F1BD00E0B3D5 /* main.m in Sources */,
+				129FD62B1766F1BD00E0B3D5 /* SCAppDelegate.m in Sources */,
+				12503EFB176969DB007F3B8C /* SCTextView.m in Sources */,
+				12503F01176AE36C007F3B8C /* SCInsertionPoint.m in Sources */,
+				1250B3AD17717497009FF71D /* SCKeyMap.m in Sources */,
+				12D80B1D17778C8D00678CB2 /* SCCommand.m in Sources */,
+				12D80B2117792B2800678CB2 /* SCBuffer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		129FD6201766F1BD00E0B3D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				129FD6211766F1BD00E0B3D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		129FD6261766F1BD00E0B3D5 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				129FD6271766F1BD00E0B3D5 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		129FD62C1766F1BD00E0B3D5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				129FD62D1766F1BD00E0B3D5 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12503EF11766F859007F3B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Cedar/build/Release\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		12503EF21766F859007F3B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Cedar/build/Release\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		129FD6431766F1BD00E0B3D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		129FD6441766F1BD00E0B3D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		129FD6461766F1BD00E0B3D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Cedar/build/Release\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sculpy/Sculpy-Prefix.pch";
+				INFOPLIST_FILE = "Sculpy/Sculpy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		129FD6471766F1BD00E0B3D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Cedar/build/Release\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sculpy/Sculpy-Prefix.pch";
+				INFOPLIST_FILE = "Sculpy/Sculpy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12503EF01766F859007F3B8C /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12503EF11766F859007F3B8C /* Debug */,
+				12503EF21766F859007F3B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		129FD60F1766F1BD00E0B3D5 /* Build configuration list for PBXProject "Sculpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				129FD6431766F1BD00E0B3D5 /* Debug */,
+				129FD6441766F1BD00E0B3D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		129FD6451766F1BD00E0B3D5 /* Build configuration list for PBXNativeTarget "Sculpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				129FD6461766F1BD00E0B3D5 /* Debug */,
+				129FD6471766F1BD00E0B3D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 129FD60C1766F1BD00E0B3D5 /* Project object */;
+}
